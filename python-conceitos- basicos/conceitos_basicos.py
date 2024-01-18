@@ -1,6 +1,6 @@
 ###############    Exercicios em Python - Conceitos Básicos   ############
 
-
+''' 
 # Exercício 1: Operações com números
 # a) Declare duas variáveis, 'a' e 'b', e atribua valores a elas.
 # b) Imprima a soma, subtração, multiplicação e divisão de 'a' por 'b'.
@@ -42,12 +42,12 @@ lista_numeros.append(6)
 lista_numeros.remove(1) # passa como argumento o numero que quer remover
 print(f"Lista atualizada: {lista_numeros}")
 
-'''
-Em uma lista, os índices começam do 0 para o primeiro elemento, 1 para o 
-segundo, e assim por diante. Se você usar um índice negativo, Python conta a 
-partir do final da lista, sendo -1 o último elemento, -2 o penúltimo, e assim 
-por diante.
-''' 
+
+#Em uma lista, os índices começam do 0 para o primeiro elemento, 1 para o 
+#segundo, e assim por diante. Se você usar um índice negativo, Python conta a 
+#partir do final da lista, sendo -1 o último elemento, -2 o penúltimo, e assim 
+#por diante.
+
 print(f"O último numero da lista atualizada é: {lista_numeros[-1]}")
 
 
@@ -100,8 +100,49 @@ elif var_idade >= 20 and var_idade < 60:
 else:
   print(f"Voce eh Idoso")
   
-
-#________________________________________________________________
+'''
+#________________________________________________________________________________
 # Exercício 7: Soma com loop for
 # a) Crie um loop 'for' que soma os números de 1 a 10.
 # b) Imprima o resultado.
+
+var_soma = 0
+for i in range(1,11):
+  var_soma += i
+print(f"O valor da soma eh: {var_soma}")
+
+
+#________________________________________________________________________________
+# Exercício 8: Contagem regressiva com loop while
+# a) Crie um loop 'while' que conta regressivamente de 10 até 1.
+# b) Imprima cada número durante a contagem regressiva.
+
+var_time = 10
+while var_time >= 1:
+  print(f"{var_time}")
+  var_time -= 1
+
+#________________________________________________________________________________
+# Exercício 9: Tabuada com loop for
+# a) Solicite ao usuário que digite um número.
+# b) Use um loop 'for' para imprimir a tabuada desse número, de 1 a 10.
+
+var_num = int(input("Digite um número: "))
+i = 1
+for i in range(1,11):
+  print(f"{var_num} X {i} = {i * var_num}")
+  
+  
+# Exercício 10: Adivinhe o número com loop while
+# a) Escolha um número aleatório entre 1 e 10.
+# b) Peça ao usuário para adivinhar o número.
+# c) Use um loop 'while' para continuar pedindo ao usuário até que ele acerte.
+
+import random
+numero_secreto = random.randint(1, 10)
+chute = 0
+tentativa = 0
+while numero_secreto != chute:
+  chute = int(input("Chute um valor entre (1,10)"))
+  tentativa +=1
+print(f"Parabéns! Você acertou em {tentativa} tentativas. O número era {numero_secreto}.")
