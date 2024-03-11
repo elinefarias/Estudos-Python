@@ -1,6 +1,7 @@
 # Python
 Repositorio destinado a estudos sobre a linguagem Python
 
-- python-conceitos-basicos
+- Conceitos básicos
+- POO (Orientação a objetos)
 - FastAPI
-- Lib: requests
+- Biblioteca requests
